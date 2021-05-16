@@ -293,6 +293,7 @@
             this.btThoat.TabIndex = 3;
             this.btThoat.Text = "Thoát";
             this.btThoat.UseVisualStyleBackColor = true;
+            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
             // 
             // btSua
             // 
@@ -396,6 +397,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FDonHang";
             this.Text = "FOrderDetails";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FDonHang_FormClosing);
             this.Load += new System.EventHandler(this.FDonHang_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

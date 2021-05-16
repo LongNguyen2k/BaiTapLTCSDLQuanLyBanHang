@@ -137,5 +137,18 @@ namespace NW1
             f.maDH = int.Parse(gVDH.CurrentRow.Cells[0].Value.ToString());
             f.ShowDialog();
         }
+
+        private void btThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FDonHang_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // gọi neu mà chọn cancel thì ko cho tắt form
+            if(MessageBox.Show("Are you sure you want to exit the program ? " , "Warning " , MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.No)
+                e.Cancel = true;
+        }
     }
 }
