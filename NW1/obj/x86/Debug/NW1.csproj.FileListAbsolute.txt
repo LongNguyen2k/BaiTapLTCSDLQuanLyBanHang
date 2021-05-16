@@ -1,0 +1,41 @@
+D:\Visual Studio 2010\Projects\NW1\NW1\obj\x86\Debug\NW1.Form1.resources
+D:\Visual Studio 2010\Projects\NW1\NW1\obj\x86\Debug\NW1.Properties.Resources.resources
+D:\Visual Studio 2010\Projects\NW1\NW1\obj\x86\Debug\NW1.csproj.GenerateResource.Cache
+D:\Visual Studio 2010\Projects\NW1\NW1\bin\Debug\NW1.exe.config
+D:\Visual Studio 2010\Projects\NW1\NW1\bin\Debug\NW1.exe
+D:\Visual Studio 2010\Projects\NW1\NW1\bin\Debug\NW1.pdb
+D:\Visual Studio 2010\Projects\NW1\NW1\obj\x86\Debug\NW1.exe
+D:\Visual Studio 2010\Projects\NW1\NW1\obj\x86\Debug\NW1.pdb
+C:\Users\Admin\Desktop\NW1\NW1\bin\Debug\NW1.exe.config
+C:\Users\Admin\Desktop\NW1\NW1\obj\x86\Debug\NW1.exe
+C:\Users\Admin\Desktop\NW1\NW1\obj\x86\Debug\NW1.pdb
+C:\Users\Admin\Desktop\NW1\NW1\bin\Debug\NW1.exe
+C:\Users\Admin\Desktop\NW1\NW1\bin\Debug\NW1.pdb
+C:\Users\Admin\Desktop\NW1\NW1\obj\x86\Debug\NW1.Form1.resources
+C:\Users\Admin\Desktop\NW1\NW1\obj\x86\Debug\NW1.Properties.Resources.resources
+C:\Users\Admin\Desktop\NW1\NW1\obj\x86\Debug\NW1.csproj.GenerateResource.Cache
+C:\Users\Admin\Desktop\NW1\NW1\obj\x86\Debug\NW1.FSanPham.resources
+D:\LapTrinhCoSoDuLieu\QLSP\NW1\bin\Debug\NW1.exe.config
+D:\LapTrinhCoSoDuLieu\QLSP\NW1\obj\x86\Debug\NW1.exe
+D:\LapTrinhCoSoDuLieu\QLSP\NW1\obj\x86\Debug\NW1.pdb
+D:\LapTrinhCoSoDuLieu\QLSP\NW1\bin\Debug\NW1.exe
+D:\LapTrinhCoSoDuLieu\QLSP\NW1\bin\Debug\NW1.pdb
+D:\LapTrinhCoSoDuLieu\QLSP\NW1\obj\x86\Debug\NW1.csprojResolveAssemblyReference.cache
+D:\LapTrinhCoSoDuLieu\QLSP\NW1\obj\x86\Debug\NW1.FSanPham.resources
+D:\LapTrinhCoSoDuLieu\QLSP\NW1\obj\x86\Debug\NW1.Properties.Resources.resources
+D:\LapTrinhCoSoDuLieu\QLSP\NW1\obj\x86\Debug\NW1.csproj.GenerateResource.Cache
+C:\Users\Admin\Downloads\QLSP\NW1\bin\Debug\NW1.exe.config
+C:\Users\Admin\Downloads\QLSP\NW1\obj\x86\Debug\NW1.exe
+C:\Users\Admin\Downloads\QLSP\NW1\obj\x86\Debug\NW1.pdb
+C:\Users\Admin\Downloads\QLSP\NW1\bin\Debug\NW1.exe
+C:\Users\Admin\Downloads\QLSP\NW1\bin\Debug\NW1.pdb
+C:\Users\Admin\Downloads\QLSP\NW1\obj\x86\Debug\NW1.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Downloads\QLSP\NW1\obj\x86\Debug\NW1.Form1.resources
+C:\Users\Admin\Downloads\QLSP\NW1\obj\x86\Debug\NW1.FSanPham.resources
+C:\Users\Admin\Downloads\QLSP\NW1\obj\x86\Debug\NW1.Properties.Resources.resources
+C:\Users\Admin\Downloads\QLSP\NW1\obj\x86\Debug\NW1.csproj.GenerateResource.Cache
+C:\Users\Admin\Downloads\QLSP\NW1\obj\x86\Debug\NW1.FDonHang.resources
+D:\LapTrinhCoSoDuLieu\QLSP\NW1\obj\x86\Debug\NW1.FDonHang.resources
+D:\LapTrinhCoSoDuLieu\QLSP\NW1\obj\x86\Debug\NW1.FormChiTietDonHang.resources
+D:\LapTrinhCoSoDuLieu\QLSP\NW1\obj\x86\Debug\NW1.FDatHang.resources
+D:\LapTrinhCoSoDuLieu\QLSP\NW1\obj\x86\Debug\NW1.FormNhanVien.resources
