@@ -34,6 +34,7 @@
             this.dienThoaiLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBoxMaSP = new System.Windows.Forms.ComboBox();
             this.textBoxSoLuong = new System.Windows.Forms.TextBox();
             this.textBoxDonGia = new System.Windows.Forms.TextBox();
             this.txtMaDH = new System.Windows.Forms.TextBox();
@@ -59,7 +60,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.quảnLýSảnPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýĐơnHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comboBoxMaSP = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -137,6 +137,14 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin đơn hàng";
+            // 
+            // comboBoxMaSP
+            // 
+            this.comboBoxMaSP.FormattingEnabled = true;
+            this.comboBoxMaSP.Location = new System.Drawing.Point(165, 85);
+            this.comboBoxMaSP.Name = "comboBoxMaSP";
+            this.comboBoxMaSP.Size = new System.Drawing.Size(265, 24);
+            this.comboBoxMaSP.TabIndex = 9;
             // 
             // textBoxSoLuong
             // 
@@ -282,6 +290,7 @@
             this.btSua.TabIndex = 2;
             this.btSua.Text = "Sửa";
             this.btSua.UseVisualStyleBackColor = true;
+            this.btSua.Click += new System.EventHandler(this.btSua_Click);
             // 
             // btXoa
             // 
@@ -356,14 +365,6 @@
             this.quảnLýĐơnHàngToolStripMenuItem.Name = "quảnLýĐơnHàngToolStripMenuItem";
             this.quảnLýĐơnHàngToolStripMenuItem.Size = new System.Drawing.Size(194, 32);
             this.quảnLýĐơnHàngToolStripMenuItem.Text = "Quản lý đơn hàng";
-            // 
-            // comboBoxMaSP
-            // 
-            this.comboBoxMaSP.FormattingEnabled = true;
-            this.comboBoxMaSP.Location = new System.Drawing.Point(165, 85);
-            this.comboBoxMaSP.Name = "comboBoxMaSP";
-            this.comboBoxMaSP.Size = new System.Drawing.Size(265, 24);
-            this.comboBoxMaSP.TabIndex = 9;
             // 
             // FormChiTietDonHang
             // 

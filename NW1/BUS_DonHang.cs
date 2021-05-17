@@ -66,6 +66,22 @@ namespace NW1
 
 
         }
+        public void SuaChiTietDonHang(OrderDetail oD1 , OrderDetail oD2)
+        {
+           if(da.SuaChiTietDonHang(oD1 , oD2))
+            {
+               
+                MessageBox.Show("Sua thanh cong chi tiet Don Hang Moi !");
+            }
+            else
+            {
+                MessageBox.Show("Sua that bat Chi Tiet Don Hang !");
+
+            }
+
+
+
+        }
 
         public void SuaDonHang(Order d)
         {

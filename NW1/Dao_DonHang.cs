@@ -63,6 +63,8 @@ namespace NW1
             db.OrderDetails.InsertOnSubmit(oD);
             db.SubmitChanges();
         }
+
+
         public bool SuaDH(Order donHang)
         {
             bool tinhTrang = false;
@@ -80,6 +82,39 @@ namespace NW1
 
                 db.SubmitChanges();
                 tinhTrang = true;
+            }
+            catch (Exception)
+            {
+                tinhTrang = false;
+                throw;
+            }
+
+            return tinhTrang;
+
+        }
+
+        public bool SuaChiTietDonHang(OrderDetail ctDonHangCu , OrderDetail ctDonHangMoi)
+        {
+            bool tinhTrang = false;
+            try
+            {
+                OrderDetail d = db.OrderDetails.First( s =>
+                ( s.OrderID == ctDonHangCu.OrderID ) 
+                && (s.ProductID == ctDonHangCu.ProductID)
+                && (s.UnitPrice == ctDonHangCu.UnitPrice)
+                && (s.Quantity == ctDonHangCu.Quantity)
+                 
+                
+                );
+                // Sua Don Hang // Xoa Don Hang Cu Tao 1 Don Hang Moi 
+
+                db.OrderDetails.DeleteOnSubmit(d);
+
+                db.OrderDetails.InsertOnSubmit(ctDonHangMoi);
+
+                db.SubmitChanges();
+                tinhTrang = true;
+
             }
             catch (Exception)
             {

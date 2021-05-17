@@ -15,10 +15,12 @@ namespace NW1
         //khai bao bien Public
         public int maDH;
         private BUS_DonHang busDH;
+        public OrderDetail chiTietTemp;
         public FormChiTietDonHang()
         {
             InitializeComponent();
             busDH = new BUS_DonHang();
+            chiTietTemp = new OrderDetail();
         }
 
 
@@ -72,7 +74,28 @@ namespace NW1
                 textBoxDonGia.Text = gVChiTietDonHang.Rows[e.RowIndex].Cells["UnitPrice"].Value.ToString();
                 textBoxSoLuong.Text = gVChiTietDonHang.Rows[e.RowIndex].Cells["Quantity"].Value.ToString();
 
+
+                chiTietTemp.OrderID = int.Parse(txtMaDH.Text);
+                chiTietTemp.ProductID = int.Parse(comboBoxMaSP.SelectedValue.ToString());
+                chiTietTemp.Quantity = short.Parse(textBoxSoLuong.Text);
+                chiTietTemp.UnitPrice = decimal.Parse(textBoxDonGia.Text);
             }
+        }
+
+        private void btSua_Click(object sender, EventArgs e)
+        {
+
+            OrderDetail od = new OrderDetail();
+            od.OrderID = int.Parse(txtMaDH.Text);
+            od.ProductID = int.Parse(comboBoxMaSP.SelectedValue.ToString());
+            od.Quantity = short.Parse(textBoxSoLuong.Text);
+            od.UnitPrice = decimal.Parse(textBoxDonGia.Text);
+
+            busDH.SuaChiTietDonHang(  chiTietTemp ,od);
+
+            // Cap Nhat 
+            gVChiTietDonHang.Columns.Clear();
+            CapNhatDG();
         }
     }
 }
