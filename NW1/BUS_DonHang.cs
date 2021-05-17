@@ -83,6 +83,19 @@ namespace NW1
 
         }
 
+        public void XoaChiTietDonHang(OrderDetail oD)
+        {
+            if (da.XoaChiTietDonHang(oD))
+            {
+                MessageBox.Show("Xoa thanh Cong Chi Tiet Don Hang !");
+
+            }
+            else
+            {
+                MessageBox.Show("Khong thay Chi Tiet Don Hang  !");
+            }
+        }
+
         public void SuaDonHang(Order d)
         {
             if (da.SuaDH(d))

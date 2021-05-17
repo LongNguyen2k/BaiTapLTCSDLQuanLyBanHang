@@ -280,6 +280,7 @@
             this.btThoat.TabIndex = 3;
             this.btThoat.Text = "Thoát";
             this.btThoat.UseVisualStyleBackColor = true;
+            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
             // 
             // btSua
             // 
@@ -301,6 +302,7 @@
             this.btXoa.TabIndex = 1;
             this.btXoa.Text = "Xóa";
             this.btXoa.UseVisualStyleBackColor = true;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
             // btThem
             // 
@@ -379,6 +381,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormChiTietDonHang";
             this.Text = "FOrderDetails";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormChiTietDonHang_FormClosing);
             this.Load += new System.EventHandler(this.FormChiTietDonHang_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

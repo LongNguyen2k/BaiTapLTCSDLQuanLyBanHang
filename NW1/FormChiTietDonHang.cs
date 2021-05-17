@@ -97,5 +97,33 @@ namespace NW1
             gVChiTietDonHang.Columns.Clear();
             CapNhatDG();
         }
+
+        private void btXoa_Click(object sender, EventArgs e)
+        {
+            OrderDetail od = new OrderDetail();
+            od.OrderID = int.Parse(txtMaDH.Text);
+            od.ProductID = int.Parse(comboBoxMaSP.SelectedValue.ToString());
+            od.Quantity = short.Parse(textBoxSoLuong.Text);
+            od.UnitPrice = decimal.Parse(textBoxDonGia.Text);
+
+            busDH.XoaChiTietDonHang(od);
+
+            // Cap Nhat 
+            gVChiTietDonHang.Columns.Clear();
+            CapNhatDG();
+        }
+
+        private void btThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FormChiTietDonHang_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // gọi neu mà chọn cancel thì ko cho tắt form
+            if (MessageBox.Show("Are you sure you want to exit the program ? ", "Warning ", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.No)
+                e.Cancel = true;
+        }
     }
 }

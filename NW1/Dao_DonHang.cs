@@ -5,14 +5,14 @@ using System.Text;
 
 namespace NW1
 {
-    
+
     class Dao_DonHang
-    {   
+    {
         NWDataContext db;
         public Dao_DonHang()
         {
             // tao ket noi den DB
-             db = new NWDataContext();
+            db = new NWDataContext();
         }
 
         // lay danh sach Don Hang
@@ -93,18 +93,18 @@ namespace NW1
 
         }
 
-        public bool SuaChiTietDonHang(OrderDetail ctDonHangCu , OrderDetail ctDonHangMoi)
+        public bool SuaChiTietDonHang(OrderDetail ctDonHangCu, OrderDetail ctDonHangMoi)
         {
             bool tinhTrang = false;
             try
             {
-                OrderDetail d = db.OrderDetails.First( s =>
-                ( s.OrderID == ctDonHangCu.OrderID ) 
-                && (s.ProductID == ctDonHangCu.ProductID)
-                && (s.UnitPrice == ctDonHangCu.UnitPrice)
-                && (s.Quantity == ctDonHangCu.Quantity)
-                 
-                
+                OrderDetail d = db.OrderDetails.First(s =>
+               (s.OrderID == ctDonHangCu.OrderID)
+               && (s.ProductID == ctDonHangCu.ProductID)
+               && (s.UnitPrice == ctDonHangCu.UnitPrice)
+               && (s.Quantity == ctDonHangCu.Quantity)
+
+
                 );
                 // Sua Don Hang // Xoa Don Hang Cu Tao 1 Don Hang Moi 
 
@@ -126,20 +126,24 @@ namespace NW1
 
         }
 
-
-        public bool XoaDonHang(int maDonHang)
+        public bool XoaChiTietDonHang(OrderDetail ctDonHang)
         {
-
             bool tinhTrang = false;
             // Tim Kiem Don Hang 
             try
             {
 
-                Order d = db.Orders.First(s => s.OrderID == maDonHang);
+                OrderDetail d = db.OrderDetails.First(s =>
+                  (s.OrderID == ctDonHang.OrderID)
+                  && (s.ProductID == ctDonHang.ProductID)
+                  && (s.UnitPrice == ctDonHang.UnitPrice)
+                  && (s.Quantity == ctDonHang.Quantity)
 
+                  );
+   
                 // Xoa DOnhang
 
-                db.Orders.DeleteOnSubmit(d);
+                   db.OrderDetails.DeleteOnSubmit(d);
 
                 db.SubmitChanges();
                 tinhTrang = true;
@@ -149,6 +153,41 @@ namespace NW1
                 tinhTrang = false;
                 throw;
             }
+
+            return tinhTrang;
+
+        }
+
+        public bool XoaDonHang(int maDonHang)
+        {
+
+            bool tinhTrang = false;
+            // Tim Kiem Don Hang 
+            
+                Order d = db.Orders.First(s => s.OrderID == maDonHang);
+            var listCTDH = db.OrderDetails.Where(s => s.OrderID == maDonHang).ToList();
+
+            if (d != null)
+            {
+                d.CustomerID = null;
+                d.EmployeeID = null;
+                db.Orders.DeleteOnSubmit(d);
+                foreach (OrderDetail od in listCTDH)
+                {
+                    db.OrderDetails.DeleteOnSubmit(od);
+
+                }
+                db.SubmitChanges();
+                tinhTrang = true;
+
+            }
+            else
+            {
+                tinhTrang = false;
+
+            }
+
+                
 
             return tinhTrang;
 
