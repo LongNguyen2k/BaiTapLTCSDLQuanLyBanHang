@@ -34,11 +34,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMaDH = new System.Windows.Forms.TextBox();
+            this.txtDiscount = new System.Windows.Forms.TextBox();
             this.txtNhaCC = new System.Windows.Forms.TextBox();
             this.txtLoaiSP = new System.Windows.Forms.TextBox();
             this.txtDonGia = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.diaChiLabel = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.dienThoaiLabel = new System.Windows.Forms.Label();
             this.numSoLuong = new System.Windows.Forms.NumericUpDown();
             this.cbSP = new System.Windows.Forms.ComboBox();
@@ -62,8 +64,6 @@
             this.dGSP = new System.Windows.Forms.DataGridView();
             this.btTaoDonHang = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtDiscount = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -147,6 +147,14 @@
             this.txtMaDH.Size = new System.Drawing.Size(275, 22);
             this.txtMaDH.TabIndex = 14;
             // 
+            // txtDiscount
+            // 
+            this.txtDiscount.Location = new System.Drawing.Point(138, 102);
+            this.txtDiscount.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.Size = new System.Drawing.Size(280, 22);
+            this.txtDiscount.TabIndex = 22;
+            // 
             // txtNhaCC
             // 
             this.txtNhaCC.Location = new System.Drawing.Point(606, 102);
@@ -190,6 +198,16 @@
             this.diaChiLabel.Size = new System.Drawing.Size(100, 17);
             this.diaChiLabel.TabIndex = 17;
             this.diaChiLabel.Text = "Nhà cung cấp:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(25, 102);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 17);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Giảm Giá:";
             // 
             // dienThoaiLabel
             // 
@@ -325,6 +343,7 @@
             this.btThoat.TabIndex = 3;
             this.btThoat.Text = "Thoát";
             this.btThoat.UseVisualStyleBackColor = true;
+            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
             // 
             // btSua
             // 
@@ -396,24 +415,6 @@
             this.panel1.Size = new System.Drawing.Size(127, 78);
             this.panel1.TabIndex = 12;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 102);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 17);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Giảm Giá:";
-            // 
-            // txtDiscount
-            // 
-            this.txtDiscount.Location = new System.Drawing.Point(138, 102);
-            this.txtDiscount.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDiscount.Name = "txtDiscount";
-            this.txtDiscount.Size = new System.Drawing.Size(280, 22);
-            this.txtDiscount.TabIndex = 22;
-            // 
             // FDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -427,6 +428,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FDatHang";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FDatHang_FormClosing);
             this.Load += new System.EventHandler(this.FDatHang_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

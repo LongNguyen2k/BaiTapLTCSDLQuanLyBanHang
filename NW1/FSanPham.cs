@@ -82,5 +82,18 @@ namespace NW1
             dGSP.Columns.Clear();
             busSP.LayDSSanPham(dGSP);
         }
+
+        private void btThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FSanPham_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // gọi neu mà chọn cancel thì ko cho tắt form
+            if (MessageBox.Show("Are you sure you want to exit the program ? ", "Warning ", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.No)
+                e.Cancel = true;
+        }
     }
 }

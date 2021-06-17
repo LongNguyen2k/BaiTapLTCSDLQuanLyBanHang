@@ -49,8 +49,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS_DonHang.cs" />
+    <Compile Include="BUS_NhanVien.cs" />
     <Compile Include="BUS_SanPham.cs" />
     <Compile Include="Dao_DonHang.cs" />
+    <Compile Include="Dao_NhanVien.cs" />
     <Compile Include="Dao_SanPham.cs" />
     <Compile Include="FDatHang.cs">
       <SubType>Form</SubType>
@@ -75,6 +77,12 @@
     </Compile>
     <Compile Include="FormChiTietDonHang.Designer.cs">
       <DependentUpon>FormChiTietDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTesting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTesting.Designer.cs">
+      <DependentUpon>FormTesting.cs</DependentUpon>
     </Compile>
     <Compile Include="FSanPham.cs">
       <SubType>Form</SubType>
@@ -105,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormChiTietDonHang.resx">
       <DependentUpon>FormChiTietDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTesting.resx">
+      <DependentUpon>FormTesting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FSanPham.resx">
       <DependentUpon>FSanPham.cs</DependentUpon>

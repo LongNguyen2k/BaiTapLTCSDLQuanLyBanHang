@@ -19,10 +19,11 @@ namespace NW1
         }
 
         SqlConnection conn;
-        
+        int maNhanVien; 
         string chuoiKetNoi;
         void KetNoi()
         {
+            /// *** Quan trong 
             chuoiKetNoi = ConfigurationManager.ConnectionStrings["cnstr"].ConnectionString;
             conn = new SqlConnection(chuoiKetNoi);
         }
@@ -43,11 +44,12 @@ namespace NW1
 
         private void btThem_Click(object sender, EventArgs e)
         {
+            /// ***** Quan trong 
             SqlCommand cmd = cmd = new SqlCommand();
             try
             {
                 string query = string.Format(
-                        "set dateformat dmy insert into Employees(LastName,FirstName , BirthDate, Address, HomePhone) values (N'{0}', '{1}', '{2}','{3}','{4}')", txtHoten.Text, txtHoten.Text, dtpNgaySinh.Value.ToShortDateString(), txtDiaChi.Text, txtDienThoai.Text);
+                        " insert into Employees(LastName,FirstName , BirthDate, Address, HomePhone) values (N'{0}', '{1}', '{2}','{3}','{4}')", txtHoten.Text, txtHoten.Text, dtpNgaySinh.Value.ToShortDateString(), txtDiaChi.Text, txtDienThoai.Text);
                 cmd = new SqlCommand(query, conn);
                 cmd.Connection.Open();
 
@@ -73,7 +75,9 @@ namespace NW1
                 txtHoten.Text = dGNhanVien.Rows[e.RowIndex].Cells["LastName"].Value.ToString() + " " + dGNhanVien.Rows[e.RowIndex].Cells["FirstName"].Value.ToString();
                 txtDiaChi.Text = dGNhanVien.Rows[e.RowIndex].Cells["Address"].Value.ToString();
                 txtDienThoai.Text = dGNhanVien.Rows[e.RowIndex].Cells["HomePhone"].Value.ToString();
-                dtpNgaySinh.Text = dGNhanVien.Rows[e.RowIndex].Cells["BirthDate"].Value.ToString(); 
+                dtpNgaySinh.Text = dGNhanVien.Rows[e.RowIndex].Cells["BirthDate"].Value.ToString();
+                maNhanVien = int.Parse(dGNhanVien.Rows[e.RowIndex].Cells["EmployeeID"].Value.ToString());
+                
             }
             
         }
@@ -113,6 +117,43 @@ namespace NW1
         }
 
         private void btSua_Click(object sender, EventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                string query = String.Format(" UPDATE Employees SET LastName = N'{0}' , FirstName = N'{1}' , BirthDate = N'{2}' , Address = N'{3}' , HomePhone = N'{4}' WHERE EmployeeID = N'{5}' ", txtHoten.Text, txtHoten.Text, dtpNgaySinh.Value.ToShortDateString(), txtDiaChi.Text, txtDienThoai.Text , maNhanVien);
+                cmd = new SqlCommand(query, conn);
+                cmd.Connection.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(" Loi " + ex.ToString() + " Khong the them Du Lieu !");
+                throw;
+            }
+            finally {
+                cmd.Connection.Close();
+            }
+            dGNhanVien.Columns.Clear();
+            dGNhanVien.DataSource = LayDSNhanVien();
+            
+
+        }
+
+        private void btThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FormNhanVien_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // gọi neu mà chọn cancel thì ko cho tắt form
+            if (MessageBox.Show("Are you sure you want to exit the program ? ", "Warning ", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.No)
+                e.Cancel = true;
+        }
+
+        private void dGNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

@@ -129,7 +129,7 @@
             this.groupBox1.Controls.Add(this.maSanPhamLabel);
             this.groupBox1.Controls.Add(this.diaChiLabel);
             this.groupBox1.Controls.Add(this.dienThoaiLabel);
-            this.groupBox1.Location = new System.Drawing.Point(56, 86);
+            this.groupBox1.Location = new System.Drawing.Point(55, 86);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -318,7 +318,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.gVChiTietDonHang);
-            this.groupBox3.Location = new System.Drawing.Point(73, 366);
+            this.groupBox3.Location = new System.Drawing.Point(70, 366);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);

@@ -39,3 +39,4 @@ D:\LapTrinhCoSoDuLieu\QLSP\NW1\obj\x86\Debug\NW1.FDonHang.resources
 D:\LapTrinhCoSoDuLieu\QLSP\NW1\obj\x86\Debug\NW1.FormChiTietDonHang.resources
 D:\LapTrinhCoSoDuLieu\QLSP\NW1\obj\x86\Debug\NW1.FDatHang.resources
 D:\LapTrinhCoSoDuLieu\QLSP\NW1\obj\x86\Debug\NW1.FormNhanVien.resources
+D:\LapTrinhCoSoDuLieu\QLSP\NW1\obj\x86\Debug\NW1.FormTesting.resources
